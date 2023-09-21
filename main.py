@@ -63,6 +63,7 @@ def top15Graph():
 
     plt.show()
 
+
 def othersGraph():
     # Calcula os dados para o gráfico "Ultimos"
     print("Atenção: este gráfico pode demorar a ser gerado, aguarde com paciência")
@@ -70,7 +71,7 @@ def othersGraph():
     plt.figure(figsize=(12, 6))
 
     # Cria o gráfico
-    atuacaoCounts.plot(kind='bar', width=1, linewidth=0, color='darkred').set_xticklabels([])
+    atuacaoCounts.plot(kind='bar', width=0.5, linewidth=1, color='darkred').set_xticklabels([])
 
     font = {'family': 'serif',
             'color': 'darkred',
@@ -85,6 +86,7 @@ def othersGraph():
     plt.subplots_adjust(bottom=0.5)
 
     plt.show()
+
 
 def allGraph():
     # Calcula os dados para o gráfico "Todos"
@@ -105,9 +107,11 @@ def allGraph():
     plt.xlabel('Ramos de Atuação', fontdict=font)
     plt.ylabel('Número de drones', fontdict=font)
     plt.title('Todas as atuações', fontdict=font)
-
+    plt.xlim(0, 300)
+    plt.ylim(0, 1500)
     plt.subplots_adjust(bottom=0.5)
 
     plt.show()
+
 
 queryUser()
