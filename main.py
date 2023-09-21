@@ -109,3 +109,5 @@ def allGraph():
     plt.subplots_adjust(bottom=0.5)
 
     plt.show()
+
+queryUser()
